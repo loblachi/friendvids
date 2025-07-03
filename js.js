@@ -16,7 +16,7 @@ let arrObj = [
         vidlink: "Vids/KYlanbirthday9thjune.mp4"
     },
 ]
-
+let video = document.querySelector("#vid1"); 
 let grid_elem = document.querySelector(".grid"); 
 let total_html = ""; 
 function displayMain(){
@@ -41,6 +41,10 @@ function displayMain(){
     }); 
 
     grid_elem.innerHTML = total_html; 
+
+    video.addEventListener("loadedmetadata" , () => {
+        video.currentTime = 35 ;
+    })
 }
 
 displayMain(); 
